@@ -20,6 +20,8 @@ $sprite-link-7: '../icons/32fGAU3OtK-.png';
 $sprite-link-8: '../icons/1DuOLLYyPcq.png';
 $sprite-link-9: '../icons/pnOzoRF3M6F.png';
 $sprite-link-10: '../icons/8nPsa_DiNCJ.png';
+$sprite-link-11: '../icons/OS4V2kFzjOd.png';
+$sprite-link-12: '../icons/mbuQ9iQQYQH.png';
 
 * {
 	box-sizing: border-box;
@@ -777,4 +779,535 @@ body {
 
 .no-border {
 	border: none !important;
+}
+
+
+#main-content {
+	padding-top: 43px;
+	padding-right: 205px;
+	.wrapper {
+		display: flex;
+		width: 1012px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.left-sidebar {
+		color: $black;
+		padding-top: 12px;
+		width: 180px;
+
+		.left-sidebar__list {
+			.left-sidebar__list--block {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+
+				.left-sidebar__list--header {
+					font-weight: 600;
+					margin: 0 4px;
+					color: #616770;
+					font-size: 13px;
+					margin-bottom: 4px;
+				}
+
+				.left-sidebar__list--item {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-size: 13px;
+					height: 29px;
+					border: 1px solid transparent;
+					cursor: pointer;
+					padding: 0 4px;
+					transition: all .3s;
+
+					&.active {
+						background-color: #f6f7f9;
+						border: 1px solid $border-grey;
+						border-radius: 2px;
+						font-weight: 600;
+
+						&.options {
+							.left-sidebar__list--item-r {
+								visibility: visible;
+							}
+						}
+					}
+
+					&:hover {
+						background-color: #f6f7f9;
+						border: 1px solid $border-grey;
+						border-radius: 2px;
+
+						&.options {
+							.left-sidebar__list--item-r {
+								visibility: visible;
+							}
+						}
+					}
+
+					.left-sidebar__list--item-l {
+						display: flex;
+						align-items: center;
+					}
+
+					.l-sidebar--img {
+						border-radius: 50%;
+						max-height: 20px;
+						max-width: 20px;
+					}
+
+					.l-sidebar--img,
+					.l-sidebar--icon {
+						margin-right: 6px;
+					}
+
+					.l-sidebar--icon {
+						background-size: auto;
+						background-repeat: no-repeat;
+						display: inline-block;
+						height: 20px;
+						width: 20px;
+					}
+
+					.left-sidebar__list--item-r {
+						visibility: hidden;
+					}
+
+				}
+
+				.left-sidebar__list--item-n {
+					margin: 0 4px;
+				}
+			}
+
+			a {
+				color: #365899;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	} 
+}
+
+.main {
+	display: flex;
+	margin-left: 10px;
+	padding-top: 12px;
+	width: 820px;
+
+	.right-col {
+		marign-left: 10px;
+	}
+}
+
+.post-editor {
+	border: 1px solid $border-grey;
+	border-radius: 4px;
+	width: 500px;
+
+	&.active {
+		.post-editor__block {
+			position: relative;
+			z-index: 312;
+		}
+		.post-editor__presentation {
+			opacity: 0.6;
+		}
+		.post-editor__close {
+			opacity: 1 !important;
+		}
+		.post-editor__body--textarea-pholder {
+			opacity: 0;
+			pointer-events: none;
+		}
+		textarea {
+			opacity: 1 !important;
+			pointer-events: auto !important;
+		}
+
+		.post-editor__footer--primary {
+			display: none !important;
+		}
+
+		.post-editor__footer--secondary {
+			display: block !important;
+		}
+	}
+
+	.post-editor__block {
+		background-color: #FFF;
+		border-radius: 4px;
+	}
+
+	.post-editor__header {
+		display: flex;
+		justify-content: space-between;
+		background-color: #f6f7f9;
+		padding: 8px 0;
+		@include border-top-radius(4px);
+		border-bottom: 1px solid $border-grey;
+
+		.post-editor__nav {
+			display: flex;
+			align-items: center;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+
+			.post-editor__nav--item {
+				display: flex;
+				font-weight: 600;
+				color: #365899;
+				cursor: pointer;
+				padding: 0 8px;
+
+				&.active {
+					color: #4b4f56;
+				}
+
+				&.d-b {
+					border-left: 1px solid $border-grey;
+					border-right: 1px solid $border-grey;
+				}
+
+				.post-editor__nav--item-i {
+					display: block;
+					background-repeat: no-repeat;
+					background-size: auto;
+					height: 16px;
+					width: 16px;
+					margin-right:6px;
+				}
+			}
+		}
+
+		.post-editor__close {
+			display: inline-block;
+			background-image: url($sprite-link-12);
+			background-position: 0 -147px;
+		    background-repeat: no-repeat;
+    		background-size: auto;
+    		height: 20px;
+    		width: 20px;
+    		margin: 0px 8px;
+    		opacity: 0;
+    		cursor: pointer;
+		}
+	}
+
+	.post-editor__body {
+		display: flex;
+		align-items: center;
+		padding: 10px 10px 10px;
+		background-color: #FFF;
+
+		.post-editor__body--image {
+			max-width: 40px;
+			max-height: 40px;
+			margin-right: 10px;
+			img {
+				max-width: 40px;
+				border-radius: 50%;
+				border: 1px solid $border-grey;
+			}
+		}
+
+		.post-editor__body--textarea {
+			position: relative;
+			width: 420px;
+			height: 45px;
+			.post-editor__body--textarea-pholder {
+				border: none;
+				font-family: $app-font;
+				font-size: 14px;
+				color: #969aa2;
+				position: absolute;
+				left:0;
+				top: 13px;
+			}
+			textarea {
+				font-family: $app-font;
+				font-size: 20px;
+				border: none;
+				resize:none;
+				opacity: 0;
+				position: absolute;
+				left: 0;
+				top: 10px !important;
+				pointer-events: none;
+				width: 100%;
+				height: 45px;
+			}
+		}
+	}
+
+	.post-editor__footer {
+
+		.post-editor__button {
+			display: flex;
+			background-color: $grey;
+			color: #4b4f56;
+			height: 32px;
+			align-items: center;
+			font-weight: 600;
+			padding: 0 15px;
+			border-radius: 999px;
+			margin-right: 6px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #e9ebee;
+			}
+
+			.post-editor__button--icon {
+					display: inline-block;
+				    background-repeat: no-repeat;
+				    background-size: auto;
+				    height: 20px;
+				    width: 20px;
+				    margin-right: 6px;
+			}
+		}
+		.post-editor__footer--primary {
+			display: flex;
+			align-items: center;
+			padding: 8px 0;
+			border-top: 1px solid $border-grey;
+			margin: 10px 10px 0px;
+
+			.f-options {
+				margin: 0px !important;
+			}
+		}
+
+		.post-editor__footer--secondary {
+			display: none;
+			background-color: #FFF;
+			@include border-bottom-radius(3px);
+
+			.post-editor__options {
+				border-top: 1px solid $border-grey;
+				margin: 10px 10px 0px;
+				padding: 8px 0px;
+				height: 100px;
+				overflow-y: scroll;
+
+				.post-editor__options--row {
+					display: flex;
+					justify-content: space-between;
+
+					.post-editor__button {
+						flex-basis: 50%;
+						margin-bottom: 8px;
+					}
+				}
+			}
+			.post-editor__submit {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				background-color: $grey;
+				border-top: 1px solid $border-grey;
+				padding: 10px;
+				@include border-bottom-radius(3px);
+
+				.post-editor__submit--public {
+					display: flex;
+					align-items: center;
+					color: $black;
+					padding: 0 10px;
+					font-weight: 600;
+					border-radius: 2px;
+					cursor: pointer;
+					border: 1px solid $border-grey;
+					height: 23px;
+
+					&:hover {
+						background-color: #e9ebee;
+					}
+
+					.post-editor__submit-icon {
+						display: inline-block;
+						background-repeat: no-repeat;
+						background-size: auto;
+						height: 16px;
+						width: 16px;
+						margin-right: 6px;
+					}
+				}
+
+				.post-editor__submit--btn {
+					background-color: $blue;
+					color: #FFF;
+					height: 22px;
+					line-height: 22px;
+					text-align: center;
+					padding: 0px 16px;
+					border-radius: 2px;
+					font-weight: 600;
+					cursor: pointer;
+					margin-left: 10px;
+
+					&:hover {
+						background-color: #365899;
+					}
+				}
+			}
+		}
+	}
+
+	.post-editor__presentation {
+		position: fixed;
+		background-color: $black;
+		opacity: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 310;
+		pointer-events: none;
+	}
+
+}
+
+.mr-t-10 {
+	margin-top: 10px !important;
+}
+
+/* icons */
+
+.f-options {
+	display: inline-block;
+	background-image: url($sprite-link);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 -1913px;
+    height: 20px;
+    width: 20px;
+}
+
+.f-feed {
+	background-image: url($sprite-link);
+	background-position: 0 -1178px;
+}
+
+.f-messenger {
+	background-image: url($sprite-link);
+	background-position: 0 -149px;
+}
+
+.f-events {
+	background-image: url($sprite-link-11);
+	background-position: 0 -42px;
+}
+
+.f-pages {
+	background-image: url($sprite-link);
+	background-position: 0 -233px;
+}
+
+.f-groups {
+	background-image: url($sprite-link);
+	background-position: 0 -107px;
+}
+
+.f-flist {
+	background-image: url($sprite-link);
+	background-position: 0 -779px;
+}
+
+.f-memories {
+	background-image: url($sprite-link);
+	background-position: 0 -1241px;
+}
+
+.f-page-feed {
+	background-image: url($sprite-link);
+	background-position: 0 -212px;
+}
+
+.f-f-friends {
+	background-image: url($sprite-link);
+	background-position: 0 -821px;
+}
+
+.f-insights {
+	background-image: url($sprite-link);
+	background-position: 0 -254px;
+}
+
+.f-games {
+	background-image: url($sprite-link);
+	background-position: 0 -884px;
+}
+
+.f-photos {
+	background-image: url($sprite-link);
+	background-position: 0 -1346px;
+}
+
+
+.f-pencil {
+	background-image: url($sprite-link-12);
+	background-position: 0 -304px;
+}
+
+.f-album {
+	background-image: url($sprite-link-12);
+	background-position: 0 -321px;
+}
+
+.f-video {
+	background-image: url($sprite-link);
+	background-position: 0 -2536px;
+}
+
+.f-image {
+	background-image: url($sprite-link);
+	background-position: 0 -1325px;
+}
+
+.f-smile {
+	background-image: url($sprite-link);
+	background-position: 0 -716px;
+}
+
+.f-world {
+	background-image: url($sprite-link);
+	background-position: 0 -2315px;
+}
+
+.f-list {
+	background-image: url($sprite-link);
+	background-position: 0 -1031px;
+}
+
+.f-gif {
+	background-image: url($sprite-link);
+	background-position: 0 -926px;
+}
+
+.f-check {
+	background-image: url($sprite-link);
+	background-position: 0 -1367px;
+}
+
+.f-sticker {
+	background-image: url($sprite-link);
+	background-position: 0 -1577px;
+}
+
+.f-tag {
+	background-image: url($sprite-link);
+	background-position: 0 -800px;
+}
+
+.f-tag-event {
+	background-image: url($sprite-link);
+	background-position: 0 -485px;
 }

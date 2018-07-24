@@ -8,7 +8,7 @@ const SocialBar = props => {
 	return (
 		<ul className="navbar__social">
 			<li className="navbar__social--profile">
-				<img src={profile_default} alt="profile-image" /><span className="navbar__social--profile-text">Harry</span>
+				<img src={profile_default} alt="profile-image" /><span className="navbar__social--profile-text">Jon</span>
 			</li>
 			<li className="navbar__social--account">
 				<AccountSwitcher />

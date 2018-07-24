@@ -62,7 +62,7 @@ class AccountSwitcher extends Component {
 									<img src={pp} alt="profile-picture-2" />
 								</div>
 								<div className="a-switcher__account--name">
-									Harry
+									Jon
 								</div>
 							</div>
 							<span className="a-switcher__account--status-i"></span>
