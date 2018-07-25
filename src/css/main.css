@@ -948,6 +948,125 @@ textarea {
         width: 12px !important;
         margin-right: 5px; }
 
+.stories {
+  margin-left: 12px;
+  background-color: #FFF;
+  width: 300px;
+  border-radius: 4px;
+  padding: 10px 12px;
+  border: 1px solid #dddfe2; }
+  .stories .stories__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .stories .stories__header .stories__header--title {
+      font-size: 13px;
+      color: #616770;
+      font-weight: 600; }
+    .stories .stories__header .stories__header--i {
+      display: inline-block;
+      background-size: auto;
+      background-repeat: no-repeat; }
+    .stories .stories__header .f-option-s {
+      width: 20px;
+      height: 20px;
+      background-image: url("../icons/QApaqfOB3oV.png");
+      background-position: -251px -49px; }
+  .stories .stories__body {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .stories .stories__body .stories__list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+      .stories .stories__body .stories__list .stories__list--item {
+        cursor: pointer; }
+        .stories .stories__body .stories__list .stories__list--item .story .story__author {
+          display: flex;
+          align-items: center; }
+          .stories .stories__body .stories__list .stories__list--item .story .story__author .story__author--image {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            padding: 2px;
+            border: 2px solid #3578e5; }
+            .stories .stories__body .stories__list .stories__list--item .story .story__author .story__author--image img {
+              border-radius: 50%;
+              width: 100%;
+              height: 100%; }
+          .stories .stories__body .stories__list .stories__list--item .story .story__author .story__author--info {
+            margin-left: 5px; }
+            .stories .stories__body .stories__list .stories__list--item .story .story__author .story__author--info .story__author--name {
+              color: #365899;
+              font-weight: 600;
+              margin-bottom: 4px; }
+            .stories .stories__body .stories__list .stories__list--item .story .story__author .story__author--info .story__author--l-seen {
+              color: #8d949e; }
+
+.request {
+  background-color: #FFF;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #dddfe2; }
+  .request .request__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 12px 0; }
+    .request .request__header .request__header--title {
+      font-size: 13px;
+      color: #616770;
+      font-weight: 600; }
+    .request .request__header .request__header--link {
+      color: #365899; }
+  .request .request__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    .request .request__list .request__list--item {
+      margin: 12px; }
+      .request .request__list .request__list--item .request-info {
+        display: flex;
+        align-items: center; }
+        .request .request__list .request__list--item .request-info .request-info__image {
+          width: 48px;
+          height: 48px; }
+          .request .request__list .request__list--item .request-info .request-info__image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; }
+        .request .request__list .request__list--item .request-info .request-info__d {
+          margin-left: 10px; }
+          .request .request__list .request__list--item .request-info .request-info__d .request-info__d--name {
+            color: #365899;
+            font-weight: 600; }
+          .request .request__list .request__list--item .request-info .request-info__d .request-info__d--mutual {
+            color: #8d949e;
+            margin: 2px 0; }
+          .request .request__list .request__list--item .request-info .request-info__d .request-info__d--btn button {
+            cursor: pointer;
+            border: 1px solid #dddfe2;
+            background-color: #f6f7f9;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 2px;
+            height: 23px;
+            display: flex;
+            align-items: center; }
+            .request .request__list .request__list--item .request-info .request-info__d .request-info__d--btn button:hover {
+              background-color: #f0f2f5; }
+          .request .request__list .request__list--item .request-info .request-info__d .request-info__d--btn .f-add-friend {
+            width: 12px;
+            height: 12px;
+            background-position: -176px -86px;
+            background-image: url("../icons/QApaqfOB3oV.png");
+            display: inline-block;
+            background-size: auto;
+            background-repeat: no-repeat;
+            margin-right: 4px; }
+
 /* icons */
 .f-options {
   display: inline-block;
