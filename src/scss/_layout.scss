@@ -33,12 +33,18 @@ body {
 	background-color: #e9ebee;
 }
 
+input,
+textarea {
+	outline: none !important;
+}
+
 .navbar {
 	position: fixed;
 	left: 0;
 	right: 0;
 	background-color: $blue;
 	padding-right: 205px;
+	z-index: 100;
 	border-bottom: 1px solid $dark-blue;
 
 	.navbar__wrapper {
@@ -423,6 +429,7 @@ body {
 		}
 
 		.a-switcher__accounts {
+			display: flex;
 
 			.a-switcher__account {
 				font-family: $app-font;
@@ -909,6 +916,8 @@ body {
 	border: 1px solid $border-grey;
 	border-radius: 4px;
 	width: 500px;
+	position: relative;
+	z-index: 0;
 
 	&.active {
 		.post-editor__block {

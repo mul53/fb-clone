@@ -6,12 +6,17 @@ body {
   font-size: 12px;
   background-color: #e9ebee; }
 
+input,
+textarea {
+  outline: none !important; }
+
 .navbar {
   position: fixed;
   left: 0;
   right: 0;
   background-color: #4267b2;
   padding-right: 205px;
+  z-index: 100;
   border-bottom: 1px solid #29487d; }
   .navbar .navbar__wrapper {
     display: flex;
@@ -289,61 +294,63 @@ body {
       font-size: 11px;
       color: #90949c;
       margin: 0px 0px 12px; }
-    #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account {
-      font-family: Helvetica, Arial, sans-serif;
-      padding: 0;
-      background-color: #f6f7f9;
-      border: 1px solid #dddfe2;
-      border-radius: 4px;
-      width: 100px;
-      color: #1d2129;
-      cursor: pointer;
-      position: relative; }
-      #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account:hover {
-        background-color: #FFF; }
-        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account:hover.add {
-          border: 1px solid #bec2c9;
-          box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.1); }
-      #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.add .a-switcher__account--add {
-        height: 100px;
-        width: 98px;
-        background-color: #dddfe2;
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.add .a-switcher__account--add img {
-          width: 24px;
-          height: 24px; }
-      #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.active {
-        margin-right: 12px; }
-        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.active .a-switcher__account--content {
-          opacity: 0.6; }
-        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.active .a-switcher__account--status-i {
-          content: '';
-          display: block;
-          background-color: #42b72a;
-          border: 1px solid #FFF;
-          height: 16px;
-          width: 16px;
-          border-radius: 50%;
-          position: absolute;
-          top: -8px;
-          right: -4px; }
-      #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account .a-switcher__account--image {
-        display: flex;
-        justify-content: center;
-        height: 100px; }
-      #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account img {
+    #a-switcher .a-switcher__pop-up .a-switcher__accounts {
+      display: flex; }
+      #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account {
+        font-family: Helvetica, Arial, sans-serif;
+        padding: 0;
+        background-color: #f6f7f9;
+        border: 1px solid #dddfe2;
+        border-radius: 4px;
         width: 100px;
-        height: 100px;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px; }
-      #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account .a-switcher__account--name {
-        font-size: 12px;
-        height: 32px;
-        line-height: 32px;
-        text-align: center;
-        border-top: 1px solid #dddfe2; }
+        color: #1d2129;
+        cursor: pointer;
+        position: relative; }
+        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account:hover {
+          background-color: #FFF; }
+          #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account:hover.add {
+            border: 1px solid #bec2c9;
+            box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.1); }
+        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.add .a-switcher__account--add {
+          height: 100px;
+          width: 98px;
+          background-color: #dddfe2;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.add .a-switcher__account--add img {
+            width: 24px;
+            height: 24px; }
+        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.active {
+          margin-right: 12px; }
+          #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.active .a-switcher__account--content {
+            opacity: 0.6; }
+          #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account.active .a-switcher__account--status-i {
+            content: '';
+            display: block;
+            background-color: #42b72a;
+            border: 1px solid #FFF;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            position: absolute;
+            top: -8px;
+            right: -4px; }
+        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account .a-switcher__account--image {
+          display: flex;
+          justify-content: center;
+          height: 100px; }
+        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account img {
+          width: 100px;
+          height: 100px;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px; }
+        #a-switcher .a-switcher__pop-up .a-switcher__accounts .a-switcher__account .a-switcher__account--name {
+          font-size: 12px;
+          height: 32px;
+          line-height: 32px;
+          text-align: center;
+          border-top: 1px solid #dddfe2; }
 
 .navbar__dropdown {
   position: relative; }
@@ -628,7 +635,9 @@ body {
 .post-editor {
   border: 1px solid #dddfe2;
   border-radius: 4px;
-  width: 500px; }
+  width: 500px;
+  position: relative;
+  z-index: 0; }
   .post-editor.active .post-editor__block {
     position: relative;
     z-index: 312; }

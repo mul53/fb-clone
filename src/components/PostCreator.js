@@ -7,7 +7,24 @@ class PostCreator extends Component {
 		this.state = {
 			editorOpen: false
 		}
+		this.editor;
+		this.handleClick = this.handleClick.bind(this);
 		this.toggleEditor = this.toggleEditor.bind(this);
+	}
+
+	componentWillMount() {
+		document.addEventListener('mousedown', this.handleClick, false);
+	}
+
+	componentWillUnmount() {
+		document.removeEventListener('mousedown', this.handleClick, false);
+	}
+
+	handleClick(e) {
+		// when clicked outside and pop is open
+		if (!this.editor.contains(e.target) && this.state.editorOpen) {
+			this.toggleEditor();
+		}
 	}
 
 	toggleEditor() {
@@ -21,7 +38,7 @@ class PostCreator extends Component {
 		const editorCss = editorOpen ? 'post-editor active' : 'post-editor';
 		return (
 			<div className={editorCss}>
-				<div className="post-editor__block">
+				<div className="post-editor__block" ref={node => this.editor = node}>
 					<div className="post-editor__header">
 						<ul className="post-editor__nav">
 							<li className="post-editor__nav--item active">
