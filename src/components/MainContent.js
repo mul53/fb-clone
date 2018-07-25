@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LeftSidebar from './LeftSidebar';
 import Main from './Main';
+import ChatBar from './ChatBar';
 
 class MainContent extends Component {
 	render() {
@@ -9,6 +10,7 @@ class MainContent extends Component {
 				<div className="wrapper">
 					<LeftSidebar />
 					<Main />
+					<ChatBar />
 				</div>
 			</div>
 		)
