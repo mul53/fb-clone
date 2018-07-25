@@ -974,9 +974,28 @@ textarea {
 				color: #365899;
 				cursor: pointer;
 				padding: 0 8px;
+				position: relative;
 
 				&.active {
 					color: #4b4f56;
+
+					&:after {
+						content: '';
+						position: absolute;
+						top: 17px;
+						right: 36px;
+						z-index: auto;
+						@include triangle('up', 16px, 10px, $border-grey);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 18px;
+						left: 45px;
+						z-index: 1;
+						@include triangle('up', 16px, 10px, #FFF);
+					}
 				}
 
 				&.d-b {

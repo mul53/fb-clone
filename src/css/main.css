@@ -677,9 +677,32 @@ textarea {
         font-weight: 600;
         color: #365899;
         cursor: pointer;
-        padding: 0 8px; }
+        padding: 0 8px;
+        position: relative; }
         .post-editor .post-editor__header .post-editor__nav .post-editor__nav--item.active {
           color: #4b4f56; }
+          .post-editor .post-editor__header .post-editor__nav .post-editor__nav--item.active:after {
+            content: '';
+            position: absolute;
+            top: 17px;
+            right: 36px;
+            z-index: auto;
+            border-style: solid;
+            height: 0;
+            width: 0;
+            border-color: transparent transparent #dddfe2;
+            border-width: 0 8px 10px; }
+          .post-editor .post-editor__header .post-editor__nav .post-editor__nav--item.active:before {
+            content: '';
+            position: absolute;
+            top: 18px;
+            left: 45px;
+            z-index: 1;
+            border-style: solid;
+            height: 0;
+            width: 0;
+            border-color: transparent transparent #FFF;
+            border-width: 0 8px 10px; }
         .post-editor .post-editor__header .post-editor__nav .post-editor__nav--item.d-b {
           border-left: 1px solid #dddfe2;
           border-right: 1px solid #dddfe2; }
